@@ -1,5 +1,5 @@
-/* import Header from './Header.js';
-import Footer from './Footer'; */
+import Header from './Header.js';
+// import Footer from './Footer';
 import Head from 'next/head';
 
 const Layout = (props) => {
@@ -16,7 +16,7 @@ const Layout = (props) => {
         />
       </Head>
       <div className="w-9/10 mx-auto my-0">
-        {/* <Header /> */}
+        <Header />
         {props.children}
         {/*    <Footer /> */}
       </div>
