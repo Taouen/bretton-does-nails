@@ -1,4 +1,5 @@
 body {
-  background: #bd6880;
-  color: white;
+  background: url(/assets/tomoko-uji-kxvn1ogpTtE-unsplash.jpg);
+  background-position: bottom;
+  background-attachment: fixed;
 }

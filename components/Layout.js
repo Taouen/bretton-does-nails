@@ -1,5 +1,5 @@
 import Header from './Header.js';
-// import Footer from './Footer';
+import Footer from './Footer';
 import Head from 'next/head';
 
 const Layout = (props) => {
@@ -15,10 +15,11 @@ const Layout = (props) => {
           rel="stylesheet"
         />
       </Head>
-      <div className="w-9/10 mx-auto my-0">
+
+      <div className="w-9/10 mx-auto my-0 flex flex-col min-h-screen">
         <Header />
-        {props.children}
-        {/*    <Footer /> */}
+        <main className="flex-grow">{props.children}</main>
+        <Footer />
       </div>
     </>
   );

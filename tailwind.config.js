@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        didact: ['Didact Gothic', 'sans-serif'],
+        didact: ['"Didact Gothic"', 'sans-serif'],
         mallanna: ['Mallanna', 'sans-serif'],
       },
       width: {
@@ -12,7 +12,6 @@ module.exports = {
       },
     },
 
-    screens: {},
     colors: {
       pink: '#BD6880',
       grey: '#554C4F',
@@ -20,10 +19,14 @@ module.exports = {
       green: '#7E8452',
       ltgreen: '#DDD385',
       ltblue: '#D2DFF2',
+      white: 'white',
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      margin: ['last'],
+      visibility: ['group-hover'],
+    },
   },
   plugins: [],
 };
