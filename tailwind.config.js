@@ -9,17 +9,17 @@ module.exports = {
       },
       width: {
         '9/10': '90%',
+        inherit: 'inherit',
       },
-    },
-
-    colors: {
-      pink: '#BD6880',
-      grey: '#554C4F',
-      ltpink: '#FBD1B9',
-      green: '#7E8452',
-      ltgreen: '#DDD385',
-      ltblue: '#D2DFF2',
-      white: 'white',
+      colors: {
+        pink: '#BD6880',
+        grey: '#554C4F',
+        ltpink: '#FBD1B9',
+        siteGreen: '#7E8452',
+        ltgreen: '#DDD385',
+        ltblue: '#D2DFF2',
+        white: 'white',
+      },
     },
   },
   variants: {

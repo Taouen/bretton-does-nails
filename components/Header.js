@@ -1,4 +1,4 @@
-import { faBars as bars } from '@fortawesome/free-solid-svg-icons';
+import { faBars as menu } from '@fortawesome/free-solid-svg-icons';
 import { faTimes as close } from '@fortawesome/free-solid-svg-icons';
 import { faExternalLinkAlt as externalLink } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,6 +8,7 @@ import { useState } from 'react';
 const pages = [
   { title: 'Home', link: '/' },
   { title: 'About', link: '/about' },
+  { title: 'Services', link: '/services' },
   {
     title: 'Book',
     link:
@@ -15,28 +16,29 @@ const pages = [
     external: true,
   },
   { title: 'Products', link: '/products' },
-  { title: 'Services', link: '/services' },
 ];
 
 const Header = () => {
   const [active, setActive] = useState(false);
 
   const mobileMenuClasses = classnames([
-    'lg:hidden font-didact text-3xl  flex-col items-start shadow-lg rounded-lg py-2 px-6 bg-white mt-2 mr-1',
+    'absolute top-14 md:right-16 md:top-5 lg:hidden font-didact text-3xl  flex-col items-start shadow-xl rounded-lg py-2 px-6 bg-white mt-2 mr-1 md:order-first md:mr-2',
     active ? 'flex' : 'hidden',
   ]);
 
   return (
-    <header className="flex justify-between md:align-center w-full mt-4">
-      <h1 className="hidden lg:inline text-5xl font-didact text-pink">
-        Bretton Does Nails
-      </h1>
+    <header className="flex fixed justify-between md:align-center w-full py-4 px-8 bg-white">
+      <a href="/" className="hidden md:inline text-5xl font-didact text-pink">
+        <h1>Bretton Does Nails</h1>
+      </a>
 
-      <div className="lg:hidden flex flex-col">
-        <h1 className=" text-5xl font-didact text-pink">Bretton </h1>
-        <h1 className=" text-5xl font-didact text-pink"> Does </h1>
-        <h1 className=" text-5xl font-didact text-pink"> Nails</h1>
-      </div>
+      <a href="/">
+        <div className="md:hidden flex flex-col">
+          <h1 className=" text-5xl font-didact text-pink">Bretton </h1>
+          <h1 className=" text-5xl font-didact text-pink"> Does </h1>
+          <h1 className=" text-5xl font-didact text-pink"> Nails</h1>
+        </div>
+      </a>
 
       <ul className="hidden font-didact text-2xl lg:items-center  lg:flex">
         {pages.map((page) => {
@@ -68,10 +70,10 @@ const Header = () => {
 
       {/*  ------- Mobile Menu ------- */}
 
-      <div className="lg:hidden flex flex-col items-end">
+      <div className="lg:hidden flex flex-col items-end md:flex-row md:items-start">
         {!active ? (
           <FontAwesomeIcon
-            icon={bars}
+            icon={menu}
             className="lg:hidden fa-2x text-pink mr-2 mt-2"
             onClick={() => setActive(!active)}
           />
@@ -92,9 +94,7 @@ const Header = () => {
                   target={page.external ? '_blank' : null}
                   rel={page.external ? 'noopener' : null}
                 >
-                  <span className={page.external ? 'mr-1' : null}>
-                    {page.title}
-                  </span>
+                  {page.title}
                 </a>
               </li>
             );
