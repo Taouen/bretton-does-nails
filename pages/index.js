@@ -23,6 +23,9 @@ import BookingButton from '../components/BookingButton';
 
 /*  Issues
 
+  - Android: Footer hidden behind address bar (Firefox) and cut off at bottom (Chrome)
+  - Firefox (Desktop, Android): FOUC including external link icon being fullscreen size.
+  - Landscape view on small phones has header taking up half the screen. (might work to just adjust what sm: is in tailwind config)
   √ hover on links in header not changing styling
 
 */
