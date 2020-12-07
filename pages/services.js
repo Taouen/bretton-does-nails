@@ -29,7 +29,6 @@ const Services = ({ services, categories }) => {
       <div className="pt-10">
         {categories.map((category, index) => {
           const { name } = category.fields;
-          console.log('returning category component');
           return (
             <ServiceCategory
               key={index}
