@@ -26,7 +26,7 @@ export async function getStaticProps() {
 const Services = ({ services, categories }) => {
   return (
     <Layout>
-      <div className="pt-10">
+      <div>
         {categories.map((category, index) => {
           const { name } = category.fields;
           return (

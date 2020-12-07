@@ -18,7 +18,7 @@ const Layout = (props) => {
 
       <div className="mx-auto my-0 flex flex-col min-h-screen ">
         <Header />
-        <main className="flex-grow mt-40 md:mt-16 lg:mt-20 px-8">
+        <main className="flex-grow mt-48 md:mt-32 lg:mt-24 px-8">
           {props.children}
         </main>
         <Footer />
