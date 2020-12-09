@@ -19,6 +19,7 @@ module.exports = {
         ltgreen: '#DDD385',
         ltblue: '#D2DFF2',
         white: 'white',
+        clear: '#FFFFFF00',
       },
     },
   },

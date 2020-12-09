@@ -14,13 +14,13 @@ const Layout = (props) => {
           href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Mallanna&display=swap"
           rel="stylesheet"
         />
+        <link rel="shortcut icon" href="#" />
+        {/* remove console error "can't find favicon" */}
       </Head>
 
-      <div className="mx-auto my-0 flex flex-col min-h-screen ">
+      <div className="container mx-auto px-4 pb-4 flex flex-col min-h-screen">
         <Header />
-        <main className="flex-grow mt-48 md:mt-32 lg:mt-24 px-8">
-          {props.children}
-        </main>
+        <main className="flex-grow container px-4">{props.children}</main>
         <Footer />
       </div>
     </>

@@ -21,25 +21,20 @@ const Header = () => {
   const [active, setActive] = useState(false);
 
   const mobileMenuClasses = classnames([
-    'absolute top-14 md:right-16 md:top-5 lg:hidden font-didact text-3xl  flex-col items-start shadow-xl rounded-lg py-2 px-6 bg-white mt-2 mr-1 md:order-first md:mr-2',
+    'absolute top-14 md:right-10 md:top-4 lg:hidden font-didact text-3xl  flex-col items-start shadow-xl rounded-lg py-2 px-6 bg-white mt-2 mr-1 md:order-first md:mr-2',
     active ? 'flex' : 'hidden',
   ]);
 
   return (
-    <header className="flex fixed justify-between md:align-center w-full py-4 px-8 bg-white">
-      <a href="/" className="hidden md:inline text-5xl font-didact text-pink">
+    <header className="sticky top-0 flex justify-between md:align-center pt-4 pb-16 bg-gradient-to-b from-white via-white to-clear">
+      <a
+        href="/"
+        className="text-4xl md:inline md:text-5xl font-didact text-pink"
+      >
         <h1>Bretton Does Nails</h1>
       </a>
 
-      <a href="/">
-        <div className="md:hidden flex flex-col">
-          <h1 className=" text-5xl font-didact text-pink">Bretton </h1>
-          <h1 className=" text-5xl font-didact text-pink"> Does </h1>
-          <h1 className=" text-5xl font-didact text-pink"> Nails</h1>
-        </div>
-      </a>
-
-      <ul className="hidden font-didact text-2xl lg:items-center  lg:flex">
+      <ul className="hidden font-didact text-2xl lg:items-center lg:flex">
         {pages.map((page) => {
           const classes = classnames([
             'last:mr-0 text-pink group hover:text-grey hover:underline',
@@ -73,13 +68,13 @@ const Header = () => {
         {!active ? (
           <FontAwesomeIcon
             icon={menu}
-            className="lg:hidden fa-2x text-pink mr-2 mt-2"
+            className="lg:hidden fa-2x text-pink mt-1"
             onClick={() => setActive(!active)}
           />
         ) : (
           <FontAwesomeIcon
             icon={close}
-            className="lg:hidden fa-2x text-pink mr-2 mt-2"
+            className="lg:hidden fa-2x text-pink mt-1"
             onClick={() => setActive(!active)}
           />
         )}

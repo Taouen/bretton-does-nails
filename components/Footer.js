@@ -14,7 +14,7 @@ const socialMedia = [
 
 const Footer = () => {
   return (
-    <footer className="w-full flex flex-col items-center mb-4">
+    <footer className="w-full flex flex-col items-center">
       <div className="flex justify-center mb-3">
         {socialMedia.map((item) => (
           <Link href={item.link} key={item.name}>

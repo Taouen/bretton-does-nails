@@ -26,7 +26,10 @@ export async function getStaticProps() {
 const Services = ({ services, categories }) => {
   return (
     <Layout>
-      <div>
+      <div className="flex flex-col">
+        <h2 className="text-pink text-3xl md:text-4xl font-didact self-center mb-8">
+          Services
+        </h2>
         {categories.map((category, index) => {
           const { name } = category.fields;
           return (
