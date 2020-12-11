@@ -1,3 +1,4 @@
+import { loadGetInitialProps } from 'next/dist/next-server/lib/utils';
 import BookingButton from '../components/BookingButton';
 import Layout from '../components/Layout';
 import ServiceCategory from '../components/ServiceCategory';
@@ -31,12 +32,18 @@ const Services = ({ services, categories }) => {
           Services
         </h2>
         {categories.map((category, index) => {
-          const { name } = category.fields;
+          const { name, description } = category.fields;
+          const image = category.fields.image
+            ? category.fields.image.fields.file.url
+            : null;
+
           return (
             <ServiceCategory
               key={index}
               categoryName={name}
               services={services}
+              src={image}
+              description={description}
             />
           );
         })}

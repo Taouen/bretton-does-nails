@@ -26,7 +26,7 @@ const Header = () => {
   ]);
 
   return (
-    <header className="sticky top-0 flex justify-between md:align-center pt-4 pb-16 bg-gradient-to-b from-white via-white to-clear">
+    <header className="sticky z-50 top-0 flex justify-between md:align-center pt-4 pb-16 bg-gradient-to-b from-white via-white to-clear">
       <a
         href="/"
         className="text-4xl md:inline md:text-5xl font-didact text-pink"
