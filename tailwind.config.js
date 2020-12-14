@@ -11,6 +11,9 @@ module.exports = {
         '9/10': '90%',
         inherit: 'inherit',
       },
+      height: {
+        inherit: 'inherit',
+      },
       colors: {
         pink: '#BD6880',
         grey: '#554C4F',

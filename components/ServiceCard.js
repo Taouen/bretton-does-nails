@@ -1,5 +1,4 @@
-const Service = (props) => {
-  const { name, time, price, description } = props;
+const Service = ({ name, time, price, description }) => {
   return (
     <div className="flex flex-col bg-white rounded-lg p-2 md:h-36 shadow-lg font-didact">
       <div className="flex justify-between text-lg">

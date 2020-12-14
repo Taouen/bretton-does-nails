@@ -20,7 +20,7 @@ const Layout = (props) => {
 
       <div className="container mx-auto px-4 pb-4 flex flex-col min-h-screen">
         <Header />
-        <main className="flex-grow container px-4">{props.children}</main>
+        <main className="flex-grow container px-4 mb-8">{props.children}</main>
         <Footer />
       </div>
     </>
