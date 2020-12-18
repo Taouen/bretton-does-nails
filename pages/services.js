@@ -1,4 +1,3 @@
-import { loadGetInitialProps } from 'next/dist/next-server/lib/utils';
 import BookingButton from '../components/BookingButton';
 import Layout from '../components/Layout';
 import ServiceCategory from '../components/ServiceCategory';
@@ -22,6 +21,7 @@ export async function getStaticProps() {
       services: data.items,
       categories: cats.items,
     },
+    revalidate: 1,
   };
 }
 

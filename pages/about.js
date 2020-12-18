@@ -18,6 +18,7 @@ export async function getStaticProps() {
       about: data.items[0],
       src: `https:${photo.fields.file.url}`,
     },
+    revalidate: 1,
   };
 }
 
