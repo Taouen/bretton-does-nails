@@ -29,6 +29,8 @@ import BookingButton from '../components/BookingButton';
   - Landscape view on small phones has header taking up half the screen. (might work to just adjust what sm: is in tailwind config)
   - Page title doesn't change based on page
   - iPad - footer cut off in landscape
+  - iPhone 11 Pro (Chrome): horizontal scroll on page, and then displays smaller on rotation to portait orientation
+
   √ Gradient background on mobile isn't large enough to hide text before it gets to the "logo"
   √ hover on links in header not changing styling
 

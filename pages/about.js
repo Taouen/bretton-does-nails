@@ -1,4 +1,4 @@
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 import Layout from '../components/Layout';
 
@@ -19,33 +19,37 @@ export async function getStaticProps() {
   let data = await client.getEntries({
     content_type: 'aboutMe',
   });
+
   let photo = await client.getAsset('6iImqPX9VHpHq4SEvByDP6');
 
   return {
     props: {
-      about: data.items,
+      about: data.items[0],
       src: `https:${photo.fields.file.url}`,
     },
   };
 }
 
-export default function About({ about, src }) {
-  const paragraphs = about[0].fields.body.content;
+/* function renderRichText(data) {
+  return { __html: `${data}` };
+} */
 
+export default function About({ about, src }) {
+  console.log(about);
   return (
     <Layout>
-      <div className="container flex flex-col md:flex-row md:max-h-96">
+      <div className="container flex flex-col md:flex-row h-full">
         <img
-          className="rounded-t-lg h-auto w-full md:rounded-lg  md:w-1/3 md:h-full md:mr-4"
+          alt="Photo of Bretton Wiltshire"
+          className="rounded-t-lg h-auto w-full md:h-full md:rounded-lg md:w-1/3 md:mr-4"
           src={src}
         />
 
-        <div className="p-4 font-didact text-lg bg-white bg-opacity-60 rounded-b-lg md:rounded-lg md:overflow-scroll">
-          {paragraphs.map((item, index) => (
-            <p className="last:mb-0 mb-4" key={index}>
-              {item.content[0].value}
-            </p>
-          ))}
+        <div
+          id="content"
+          className="p-4 font-didact  bg-white bg-opacity-50 rounded-b-lg md:rounded-lg md:overflow-scroll"
+        >
+          {documentToReactComponents(about.fields.body)}
         </div>
       </div>
     </Layout>
