@@ -1,14 +1,5 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-
 import Layout from '../components/Layout';
-
-/*   TO DO
-
-    - fix image placement on md+ screens
-    - render Rich Text properly
-
-
-*/
 
 const client = require('contentful').createClient({
   space: process.env.NEXT_CONTENTFUL_SPACE_ID,
@@ -30,12 +21,7 @@ export async function getStaticProps() {
   };
 }
 
-/* function renderRichText(data) {
-  return { __html: `${data}` };
-} */
-
 export default function About({ about, src }) {
-  console.log(about);
   return (
     <Layout>
       <div className="container flex flex-col md:flex-row h-full">

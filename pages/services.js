@@ -11,6 +11,7 @@ const client = require('contentful').createClient({
 export async function getStaticProps() {
   let data = await client.getEntries({
     content_type: 'service',
+    order: 'fields.order',
   });
   let cats = await client.getEntries({
     content_type: 'serviceCategory',
@@ -32,17 +33,14 @@ const Services = ({ services, categories }) => {
           Services
         </h2>
         {categories.map((category, index) => {
-          const { name, description } = category.fields;
-          const image = category.fields.image
-            ? category.fields.image.fields.file.url
-            : null;
+          const { name, description, image } = category.fields;
 
           return (
             <ServiceCategory
               key={index}
               categoryName={name}
               services={services}
-              src={image}
+              image={image}
               description={description}
             />
           );
