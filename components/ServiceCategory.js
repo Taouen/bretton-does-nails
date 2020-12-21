@@ -1,10 +1,10 @@
-import Service from './ServiceCard';
+import Service from './Service';
 import classnames from 'classnames';
 
 const ServiceCategory = ({ categoryName, description, services, image }) => {
   const descClassNames = classnames([
     [
-      'font-didact md:w-2/3 lg:w-3/4  text-lg p-2 md:pl-4 bg-white shadow-lg rounded-b-lg md:rounded-r-lg md:rounded-b-none',
+      'font-didact md:w-2/3 lg:w-3/4  text-lg p-4  bg-white shadow-lg rounded-b-lg md:rounded-r-lg md:rounded-b-none',
       image ? 'md:w-2/3 lg:w-3/4' : 'md:w-full lg:w-full',
     ],
   ]);
@@ -20,6 +20,7 @@ const ServiceCategory = ({ categoryName, description, services, image }) => {
                 alt={`Photo for ${categoryName} category`}
                 src={`https:${image.fields.file.url}`}
                 className="rounded-t-lg md:rounded-l-lg md:rounded-t-none"
+                loading="lazy"
               />
             </div>
           )}
