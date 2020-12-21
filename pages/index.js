@@ -1,5 +1,6 @@
 import Layout from '../components/Layout';
 import BookingButton from '../components/BookingButton';
+import Post from '../components/post';
 
 /*  TO DO
 
@@ -39,9 +40,60 @@ import BookingButton from '../components/BookingButton';
 
 */
 
-export default function Home() {
+const client = require('contentful').createClient({
+  space: process.env.NEXT_CONTENTFUL_SPACE_ID,
+  accessToken: process.env.NEXT_CONTENTFUL_ACCESS_TOKEN,
+});
+
+export async function getStaticProps() {
+  let data = await client.getEntries({
+    content_type: 'post',
+    order: 'fields.date',
+  });
+
+  let photos = await client.getEntries({
+    content_type: 'instagramPhoto',
+    // order: 'createdAt',
+  });
+
+  return {
+    props: {
+      posts: data.items,
+      photos: photos.items,
+    },
+    revalidate: 1,
+  };
+}
+
+export default function Home({ photos, posts }) {
+  const { title, date, body } = posts[0].fields;
+  console.log(photos);
+
   return (
     <Layout>
+      <Post title={title} date={date} body={body} />
+      <h2 className="font-didact text-pink text-2xl self-center mb-8">
+        Instagram
+      </h2>
+      <div className=" w-3/4 md:flex md:w-3/4 mx-auto">
+        {photos.map((photo, index) => (
+          <a
+            href={photo.fields.link}
+            className="
+                
+                mx-auto
+                md:w-1/3"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              key={index}
+              src={photo.fields.image.fields.file.url}
+              alt={photo.fields.image.fields.title}
+            />
+          </a>
+        ))}
+      </div>
       <BookingButton />
     </Layout>
   );
