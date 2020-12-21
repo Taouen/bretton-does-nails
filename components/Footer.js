@@ -1,6 +1,11 @@
 import Link from 'next/link';
 const socialMedia = [
   {
+    name: 'Email',
+    image: '/assets/email.svg',
+    link: 'mailto:brettondoesnails@gmail.com',
+  },
+  {
     name: 'Facebook',
     image: '/assets/facebook.svg',
     link: 'https://www.facebook.com/bretton.does.nails',

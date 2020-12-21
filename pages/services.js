@@ -14,6 +14,7 @@ export async function getStaticProps() {
   });
   let cats = await client.getEntries({
     content_type: 'serviceCategory',
+    order: 'fields.order',
   });
 
   return {
@@ -32,6 +33,7 @@ const Services = ({ services, categories }) => {
         <h2 className="text-pink text-3xl md:text-4xl font-didact self-center mb-8">
           Services
         </h2>
+
         {categories.map((category, index) => {
           const { name, description, image } = category.fields;
 

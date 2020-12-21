@@ -11,7 +11,7 @@ const ProductCategory = ({ categoryName, description, products }) => {
       <h3 className="text-2xl font-mallanna text-pink mb-4">{categoryName}</h3>
       <div className="flex flex-col md:flex-row mb-4 ">
         <div className="flex flex-col md:flex-row">
-          <p className="font-didact text-lg p-4 bg-white shadow-lg rounded-b-lg md:rounded-r-lg md:rounded-b-none">
+          <p className="font-didact text-lg p-4 bg-white shadow-lg rounded-lg ">
             {description}
           </p>
         </div>

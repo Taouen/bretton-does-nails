@@ -15,7 +15,8 @@ const Product = ({ price, size, description, images, name }) => {
         <img
           src={images[0].fields.file.url}
           alt={name}
-          className="w-1/2 mx-auto "
+          className="w-1/2 mx-auto"
+          loading="lazy"
         />
       )}
       <p className="pt-2">{description}</p>

@@ -5,12 +5,12 @@ import BookingButton from '../components/BookingButton';
 
   Content
   - input instagram photos
-  - make prducts page, displaying available products
-  - make services page, displaying available services
-  - add contact form emailing to email address (brettondoesnails@gmail.com)
   - create news component for landing page
   - create blog page for past news items
-
+  
+  √ add contact form emailing to email address (brettondoesnails@gmail.com) **Added mail icon in footer
+  √ make services page, displaying available services
+  √ make prducts page, displaying available products
   √ find a way to control order of services/products coming from contentful
   √ link book nav to booking site
   √ add social media buttons

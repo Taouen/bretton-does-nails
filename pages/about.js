@@ -28,7 +28,7 @@ export default function About({ about, src }) {
       <div className="container flex flex-col md:flex-row h-full">
         <img
           alt="Photo of Bretton Wiltshire"
-          className="rounded-t-lg h-auto w-full md:h-full md:rounded-lg md:w-1/3 md:mr-4"
+          className="rounded-t-lg h-auto w-full md:h-full md:rounded-lg md:w-1/4 md:mr-4"
           src={src}
         />
 

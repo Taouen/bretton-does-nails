@@ -1,0 +1,8 @@
+#productPageInfo a {
+  color: #bd6880;
+}
+
+#productPageInfo a:hover {
+  color: #554c4f;
+  text-decoration: underline;
+}
