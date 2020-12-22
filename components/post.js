@@ -9,7 +9,7 @@ const Post = ({ title, date, body }) => {
     flex-col 
     divide-y-2 
     divide-pink
-    mb-12
+    mb-8
     md:flex-row 
     md:w-3/4 
     md:max-h-40
@@ -22,7 +22,9 @@ const Post = ({ title, date, body }) => {
         <h2 className="text-pink text-2xl">{title}</h2>
         <p className="text-gray-500">{date}</p>
       </div>
-      <div className="md:w-3/4 p-2">{documentToReactComponents(body)}</div>
+      <div className="md:w-3/4 px-4 py-2">
+        {documentToReactComponents(body)}
+      </div>
     </div>
   );
 };

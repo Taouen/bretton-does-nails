@@ -1,6 +1,7 @@
 import Layout from '../components/Layout';
 import BookingButton from '../components/BookingButton';
-import Post from '../components/post';
+import Post from '../components/Post';
+import InstagramCarousel from '../components/Carousel';
 
 /*  TO DO
 
@@ -71,11 +72,13 @@ export default function Home({ photos, posts }) {
 
   return (
     <Layout>
+      <h2 className="font-didact text-pink text-2xl self-center mb-4">News</h2>
       <Post title={title} date={date} body={body} />
-      <h2 className="font-didact text-pink text-2xl self-center mb-8">
+      <h2 className="font-didact text-pink text-2xl self-center mb-4">
         Instagram
       </h2>
-      <div className=" w-3/4 md:flex md:w-3/4 mx-auto">
+      <InstagramCarousel photos={photos} />
+      {/* <div className=" w-3/4 md:flex md:w-3/4 mx-auto">
         {photos.map((photo, index) => (
           <a
             href={photo.fields.link}
@@ -93,7 +96,7 @@ export default function Home({ photos, posts }) {
             />
           </a>
         ))}
-      </div>
+      </div> */}
       <BookingButton />
     </Layout>
   );
