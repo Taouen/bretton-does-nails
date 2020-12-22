@@ -13,6 +13,7 @@ const InstagramCarousel = ({ photos }) => {
           target="_blank"
           rel="noopener"
           className="w-full h-full block"
+          key={index}
         >
           <img
             key={index}
