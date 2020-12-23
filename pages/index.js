@@ -68,7 +68,6 @@ export async function getStaticProps() {
 
 export default function Home({ photos, posts }) {
   const { title, date, body } = posts[0].fields;
-  console.log(photos);
 
   return (
     <Layout>
@@ -78,7 +77,7 @@ export default function Home({ photos, posts }) {
         Instagram
       </h2>
       <InstagramCarousel photos={photos} />
-      {/* <div className=" w-3/4 md:flex md:w-3/4 mx-auto">
+      <div className=" w-3/4 md:flex md:w-3/4 mx-auto hidden">
         {photos.map((photo, index) => (
           <a
             href={photo.fields.link}
@@ -96,7 +95,7 @@ export default function Home({ photos, posts }) {
             />
           </a>
         ))}
-      </div> */}
+      </div>
       <BookingButton />
     </Layout>
   );

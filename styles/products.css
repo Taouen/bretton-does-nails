@@ -6,3 +6,9 @@
   color: #554c4f;
   text-decoration: underline;
 }
+
+.productDescription p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}

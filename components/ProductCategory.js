@@ -18,13 +18,15 @@ const ProductCategory = ({ categoryName, description, products }) => {
       </div>
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {products.map((product, index) => {
-          const { name, size, category, images } = product.fields;
+          const { name, size, category, images, description } = product.fields;
           const price = product.fields.price
             ? `$${product.fields.price}`
             : 'Free';
-          const description = product.fields.description
+          {
+            /* const description = product.fields.description
             ? product.fields.description.content[0].content[0].value
-            : null;
+            : null; */
+          }
 
           if (category === categoryName) {
             return (

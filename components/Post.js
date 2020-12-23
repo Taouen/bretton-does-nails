@@ -9,13 +9,14 @@ const Post = ({ title, date, body }) => {
     flex-col 
     divide-y-2 
     divide-pink
-    mb-8
+    mb-10
     md:flex-row 
-    md:w-3/4 
+    md:w-5/6
     md:max-h-40
     md:mx-auto
     md:divide-y-0
     md:divide-x-2
+    lg:w-3/4
     "
     >
       <div className="flex flex-col p-2">

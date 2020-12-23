@@ -1,3 +1,5 @@
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 /* 
   - Will publish with single images, will need to learn to make a carousel for products that have multiple images.
 
@@ -19,7 +21,9 @@ const Product = ({ price, size, description, images, name }) => {
           loading="lazy"
         />
       )}
-      <p className="pt-2">{description}</p>
+      <div className="productDescription pt-2">
+        {documentToReactComponents(description)}
+      </div>
     </div>
   );
 };

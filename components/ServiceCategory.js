@@ -29,13 +29,15 @@ const ServiceCategory = ({ categoryName, description, services, image }) => {
       </div>
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {services.map((service, index) => {
-          const { name, time, category } = service.fields;
+          const { name, time, category, description } = service.fields;
           const price = service.fields.price
             ? `$${service.fields.price}`
             : 'Free';
-          const description = service.fields.description
+          {
+            /* const description = service.fields.description
             ? service.fields.description.content[0].content[0].value
-            : null;
+            : null; */
+          }
 
           if (category === categoryName) {
             return (

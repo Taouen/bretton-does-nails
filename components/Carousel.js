@@ -3,7 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 const InstagramCarousel = ({ photos }) => {
   return (
     <Carousel
-      className="w-3/4 mx-auto md:w-1/2"
+      className="w-3/4 mx-auto md:hidden"
       showThumbs={false}
       showStatus={false}
     >

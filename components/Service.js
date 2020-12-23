@@ -1,3 +1,5 @@
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 const Service = ({ name, time, price, description }) => {
   return (
     <div className="flex flex-col bg-white rounded-lg p-2 md:h-36 shadow-lg font-didact">
@@ -7,7 +9,7 @@ const Service = ({ name, time, price, description }) => {
       </div>
       <span className="text-gray-500 mb-2">{time}</span>
       <div className="flex flex-grow flex-col justify-center">
-        <p>{description}</p>
+        <div>{documentToReactComponents(description)}</div>
       </div>
     </div>
   );
