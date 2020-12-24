@@ -1,5 +1,6 @@
 import Service from './Service';
 import classnames from 'classnames';
+import ShowMoreText from 'react-show-more-text';
 
 const ServiceCategory = ({ categoryName, description, services, image }) => {
   const descClassNames = classnames([

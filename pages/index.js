@@ -6,10 +6,10 @@ import InstagramCarousel from '../components/Carousel';
 /*  TO DO
 
   Content
-  - input instagram photos
   - create news component for landing page
   - create blog page for past news items
   
+  √ input instagram photos
   √ add contact form emailing to email address (brettondoesnails@gmail.com) **Added mail icon in footer
   √ make services page, displaying available services
   √ make prducts page, displaying available products
