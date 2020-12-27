@@ -1,4 +1,5 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import ShowMoreText from 'react-show-more-text';
 
 const Post = ({ title, date, body }) => {
   return (
@@ -23,8 +24,10 @@ const Post = ({ title, date, body }) => {
         <h2 className="text-pink text-2xl">{title}</h2>
         <p className="text-gray-500">{date}</p>
       </div>
-      <div className="md:w-3/4 px-4 py-2">
-        {documentToReactComponents(body)}
+      <div className="md:w-3/4 px-4 py-2 newsPostBody">
+        <ShowMoreText lines={6} more="Show More" less="Show Less">
+          {documentToReactComponents(body)}
+        </ShowMoreText>
       </div>
     </div>
   );

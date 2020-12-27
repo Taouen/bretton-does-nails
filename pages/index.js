@@ -7,9 +7,10 @@ import InstagramCarousel from '../components/InstagramCarousel';
 /*  TO DO
 
   Content
-  - create news component for landing page
   - create blog page for past news items
   
+  
+  √ create news component for landing page
   √ input instagram photos
   √ add contact form emailing to email address (brettondoesnails@gmail.com) **Added mail icon in footer
   √ make services page, displaying available services
@@ -30,13 +31,14 @@ import InstagramCarousel from '../components/InstagramCarousel';
 /*  Issues
 
   - FOUC on desktop production version
+  - Desktop: Show More/Less not adhering to positioning (show more does not push other elements down to make space, leaving 'show less' behind other elements.)
   - Android: Footer hidden behind address bar (Firefox) and cut off at bottom (Chrome)
   - Firefox (Desktop, Android): FOUC including external link icon being fullscreen size.
-  - Landscape view on small phones has header taking up half the screen. (might work to just adjust what sm: is in tailwind config)
-  - Page title doesn't change based on page
   - iPad - footer cut off in landscape
   - iPhone 11 Pro (Chrome): horizontal scroll on page, and then displays smaller on rotation to portait orientation
-
+  
+  √ Landscape view on small phones has header taking up half the screen. (might work to just adjust what sm: is in tailwind config)
+  √ Page title doesn't change based on page
   √ Gradient background on mobile isn't large enough to hide text before it gets to the "logo"
   √ hover on links in header not changing styling
 
@@ -55,7 +57,8 @@ export async function getStaticProps() {
 
   let photos = await client.getEntries({
     content_type: 'instagramPhoto',
-    // order: 'createdAt',
+    order: '-sys.createdAt',
+    limit: 3,
   });
 
   return {
@@ -69,6 +72,7 @@ export async function getStaticProps() {
 
 export default function Home({ photos, posts }) {
   const { title, date, body } = posts[0].fields;
+  console.log(photos);
 
   return (
     <>
@@ -84,14 +88,14 @@ export default function Home({ photos, posts }) {
           Instagram
         </h2>
         <InstagramCarousel photos={photos} />
-        <div className=" w-3/4 md:flex md:w-3/4 mx-auto hidden">
+        <div className=" w-3/4 md:flex items-center md:w-3/4 mx-auto hidden">
           {photos.map((photo, index) => (
             <a
               href={photo.fields.link}
               className="
                 
                 mx-auto
-                md:w-1/3"
+                md:w-1/4"
               target="_blank"
               rel="noopener"
               key={index}

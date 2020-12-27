@@ -12,7 +12,7 @@ const ProductCarousel = ({ images, name }) => {
           className="w-full h-full block"
           key={index}
         >
-          <img src={photo.fields.file.url} alt={name} />
+          <img src={photo.fields.file.url} alt={name} loading="lazy" />
         </a>
       ))}
     </Carousel>

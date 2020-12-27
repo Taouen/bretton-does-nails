@@ -19,6 +19,7 @@ const InstagramCarousel = ({ photos }) => {
             key={index}
             src={photo.fields.image.fields.file.url}
             alt={photo.fields.image.fields.title}
+            loading="lazy"
           />
         </a>
       ))}
