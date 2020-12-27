@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Layout from '../components/Layout';
 
@@ -24,21 +25,26 @@ export async function getStaticProps() {
 
 export default function About({ about, src }) {
   return (
-    <Layout>
-      <div className="container flex flex-col md:flex-row h-full">
-        <img
-          alt="Photo of Bretton Wiltshire"
-          className="rounded-t-lg h-auto w-full md:h-full md:rounded-lg md:w-1/4 md:mr-4"
-          src={src}
-        />
+    <>
+      <Head>
+        <title>Bretton Does Nails | About</title>
+      </Head>
+      <Layout>
+        <div className="container flex flex-col md:flex-row h-full">
+          <img
+            alt="Photo of Bretton Wiltshire"
+            className="rounded-t-lg h-auto w-full md:h-full md:rounded-lg md:w-1/4 md:mr-4"
+            src={src}
+          />
 
-        <div
-          id="content"
-          className="p-4 font-didact  bg-white bg-opacity-50 rounded-b-lg md:rounded-lg md:overflow-scroll"
-        >
-          {documentToReactComponents(about.fields.body)}
+          <div
+            id="content"
+            className="p-4 font-didact  bg-white bg-opacity-50 rounded-b-lg md:rounded-lg md:overflow-scroll"
+          >
+            {documentToReactComponents(about.fields.body)}
+          </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
   );
 }

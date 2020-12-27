@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import OrderButton from '../components/OrderButton';
 import Layout from '../components/Layout';
 import ProductCategory from '../components/ProductCategory';
@@ -41,33 +42,38 @@ const Products = ({ info, products, categories }) => {
   });
 
   return (
-    <Layout>
-      <div className="flex flex-col">
-        <h2 className="text-pink text-3xl md:text-4xl font-didact self-center mb-8">
-          Products
-        </h2>
-        <div
-          className="font-didact text-lg p-4 bg-white shadow-lg rounded-lg mb-12 bg-opacity-50"
-          id="productPageInfo"
-        >
-          {documentToReactComponents(pageInfo)}
+    <>
+      <Head>
+        <title>Bretton Does Nails | Products</title>
+      </Head>
+      <Layout>
+        <div className="flex flex-col">
+          <h2 className="text-pink text-3xl md:text-4xl font-didact self-center mb-8">
+            Products
+          </h2>
+          <div
+            className="font-didact text-lg p-4 bg-white shadow-lg rounded-lg mb-12 bg-opacity-50"
+            id="productPageInfo"
+          >
+            {documentToReactComponents(pageInfo)}
+          </div>
+          {categories.map((category, index) => {
+            const { name, description } = category.fields;
+
+            return (
+              <ProductCategory
+                key={index}
+                categoryName={name}
+                products={products}
+                description={description}
+              />
+            );
+          })}
         </div>
-        {categories.map((category, index) => {
-          const { name, description } = category.fields;
 
-          return (
-            <ProductCategory
-              key={index}
-              categoryName={name}
-              products={products}
-              description={description}
-            />
-          );
-        })}
-      </div>
-
-      <OrderButton />
-    </Layout>
+        <OrderButton />
+      </Layout>
+    </>
   );
 };
 

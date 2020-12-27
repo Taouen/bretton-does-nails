@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import BookingButton from '../components/BookingButton';
 import Layout from '../components/Layout';
 import ServiceCategory from '../components/ServiceCategory';
@@ -28,29 +29,34 @@ export async function getStaticProps() {
 
 const Services = ({ services, categories }) => {
   return (
-    <Layout>
-      <div className="flex flex-col">
-        <h2 className="text-pink text-3xl md:text-4xl font-didact self-center mb-8">
-          Services
-        </h2>
+    <>
+      <Head>
+        <title>Bretton Does Nails | Services</title>
+      </Head>
+      <Layout>
+        <div className="flex flex-col">
+          <h2 className="text-pink text-3xl md:text-4xl font-didact self-center mb-8">
+            Services
+          </h2>
 
-        {categories.map((category, index) => {
-          const { name, description, image } = category.fields;
+          {categories.map((category, index) => {
+            const { name, description, image } = category.fields;
 
-          return (
-            <ServiceCategory
-              key={index}
-              categoryName={name}
-              services={services}
-              image={image}
-              description={description}
-            />
-          );
-        })}
-      </div>
+            return (
+              <ServiceCategory
+                key={index}
+                categoryName={name}
+                services={services}
+                image={image}
+                description={description}
+              />
+            );
+          })}
+        </div>
 
-      <BookingButton />
-    </Layout>
+        <BookingButton />
+      </Layout>
+    </>
   );
 };
 
