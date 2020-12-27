@@ -9,7 +9,7 @@ const pages = [
   { title: 'About', link: '/about' },
   { title: 'Services', link: '/services' },
   {
-    title: 'Book',
+    title: 'Book Now',
     link:
       'https://www.fresha.com/a/bretton-does-nails-mane-attraction-winnipeg-836-mcleod-avenue-ul7mir4w/booking?menu=true',
     external: true,
