@@ -12,3 +12,7 @@
   font-size: 1rem;
   line-height: 1.5rem;
 }
+
+.productDescription span a {
+  color: #9ca3af;
+}

@@ -5,11 +5,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta charSet="UTF-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
           <html lang="en-us" />
           <link
             href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Mallanna&display=swap"

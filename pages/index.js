@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import BookingButton from '../components/BookingButton';
 import Post from '../components/Post';
-import InstagramCarousel from '../components/Carousel';
+import InstagramCarousel from '../components/InstagramCarousel';
 
 /*  TO DO
 
