@@ -4,6 +4,7 @@ import { faExternalLinkAlt as externalLink } from '@fortawesome/free-solid-svg-i
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classnames from 'classnames';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const pages = [
   { title: 'About', link: '/about' },
@@ -27,12 +28,11 @@ const Header = () => {
 
   return (
     <header className="sticky z-50 top-0 flex justify-between md:align-center pt-4 pb-16 bg-gradient-to-b from-white via-white to-clear">
-      <a
-        href="/"
-        className="text-4xl md:inline md:text-5xl font-didact text-pink"
-      >
-        <h1>Bretton Does Nails</h1>
-      </a>
+      <Link href="/">
+        <a className="text-4xl md:inline md:text-5xl font-didact text-pink">
+          <h1>Bretton Does Nails</h1>
+        </a>
+      </Link>
 
       <ul className="hidden font-didact text-2xl lg:items-center lg:flex">
         {pages.map((page) => {
@@ -42,21 +42,22 @@ const Header = () => {
           ]);
           return (
             <li className={classes} key={page.title}>
-              <a
-                href={page.link}
-                target={page.external ? '_blank' : null}
-                rel={page.external ? 'noopener' : null}
-              >
-                <span className={page.external ? 'mr-1' : null}>
-                  {page.title}
-                </span>
-                {page.external ? (
-                  <FontAwesomeIcon
-                    icon={externalLink}
-                    className="invisible group-hover:visible fa-xs mb-0.5"
-                  />
-                ) : null}
-              </a>
+              <Link href={page.link}>
+                <a
+                  target={page.external ? '_blank' : null}
+                  rel={page.external ? 'noopener' : null}
+                >
+                  <span className={page.external ? 'mr-1' : null}>
+                    {page.title}
+                  </span>
+                  {page.external ? (
+                    <FontAwesomeIcon
+                      icon={externalLink}
+                      className="invisible group-hover:visible fa-xs mb-0.5"
+                    />
+                  ) : null}
+                </a>
+              </Link>
             </li>
           );
         })}
@@ -83,15 +84,17 @@ const Header = () => {
           {pages.map((page) => {
             return (
               <li className="text-pink pb-2" key={page.title}>
-                <a
-                  className="whitespace-nowrap"
-                  // ^ prevents titles with spaces from wrapping. Placed here for "Book Now", may need to reconfigure if we have longer names later on.
-                  href={page.link}
-                  rel={page.external ? 'noopener' : null}
-                  target={page.external ? '_blank' : null}
-                >
-                  {page.title}
-                </a>
+                <Link href={page.link}>
+                  <a
+                    className="whitespace-nowrap"
+                    // ^ prevents titles with spaces from wrapping. Placed here for "Book Now", may need to reconfigure if we have longer names later on.
+
+                    rel={page.external ? 'noopener' : null}
+                    target={page.external ? '_blank' : null}
+                  >
+                    {page.title}
+                  </a>
+                </Link>
               </li>
             );
           })}
