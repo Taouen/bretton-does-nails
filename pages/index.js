@@ -6,8 +6,7 @@ import InstagramCarousel from '../components/InstagramCarousel';
 
 /* Commit message
 
-  Centered images in carousel in case of varying heights.
-  Fixed line wrapping in mobile menu.
+  Centered images in carousel in case of varying heights. Fixed line wrapping in mobile menu.
 
 */
 
