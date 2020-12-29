@@ -4,6 +4,13 @@ import BookingButton from '../components/BookingButton';
 import Post from '../components/Post';
 import InstagramCarousel from '../components/InstagramCarousel';
 
+/* Commit message
+
+  Centered images in carousel in case of varying heights.
+  Fixed line wrapping in mobile menu.
+
+*/
+
 /*  TO DO
 
   Content
@@ -31,12 +38,14 @@ import InstagramCarousel from '../components/InstagramCarousel';
 /*  Issues
 
   - FOUC on desktop production version
-  - Desktop: Show More/Less not adhering to positioning (show more does not push other elements down to make space, leaving 'show less' behind other elements.)
-  - Android: Footer hidden behind address bar (Firefox) and cut off at bottom (Chrome)
   - Firefox (Desktop, Android): FOUC including external link icon being fullscreen size.
+  - Desktop/iPad: Show More/Less not adhering to positioning (show more does not push other elements down to make space, leaving 'show less' behind other elements.)
+  - Android: Footer hidden behind address bar (Firefox) and cut off at bottom (Chrome)
   - iPad - footer cut off in landscape
   - iPhone 11 Pro (Chrome): horizontal scroll on page, and then displays smaller on rotation to portait orientation
   
+  √ Mobile: Book Now link wraps second word onto a new line.
+  √ Mobile: Instagram carousel is sized based off largest image, need to center smaller images vertically.
   √ Landscape view on small phones has header taking up half the screen. (might work to just adjust what sm: is in tailwind config)
   √ Page title doesn't change based on page
   √ Gradient background on mobile isn't large enough to hide text before it gets to the "logo"
@@ -72,7 +81,6 @@ export async function getStaticProps() {
 
 export default function Home({ photos, posts }) {
   const { title, date, body } = posts[0].fields;
-  console.log(photos);
 
   return (
     <>

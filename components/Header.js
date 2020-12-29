@@ -21,7 +21,7 @@ const Header = () => {
   const [active, setActive] = useState(false);
 
   const mobileMenuClasses = classnames([
-    'absolute top-14 md:right-10 md:top-4 lg:hidden font-didact text-3xl  flex-col items-start shadow-xl rounded-lg py-2 px-6 bg-white mt-2 mr-1 md:order-first md:mr-2',
+    'absolute top-14 md:right-10 md:top-4 lg:hidden font-didact text-3xl  flex-col shadow-xl rounded-lg py-2 px-6 bg-white mt-2 mr-1 md:order-first md:mr-2',
     active ? 'flex' : 'hidden',
   ]);
 
@@ -84,9 +84,11 @@ const Header = () => {
             return (
               <li className="text-pink pb-2" key={page.title}>
                 <a
+                  className="whitespace-nowrap"
+                  // ^ prevents titles with spaces from wrapping. Placed here for "Book Now", may need to reconfigure if we have longer names later on.
                   href={page.link}
-                  target={page.external ? '_blank' : null}
                   rel={page.external ? 'noopener' : null}
+                  target={page.external ? '_blank' : null}
                 >
                   {page.title}
                 </a>
