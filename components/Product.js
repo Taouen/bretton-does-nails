@@ -27,6 +27,7 @@ const Product = ({ price, size, description, images, name }) => {
           more="Show more"
           less="Show less"
           expanded={false}
+          anchorClass="text-gray-500"
         >
           {documentToReactComponents(description)}
         </ShowMoreText>
