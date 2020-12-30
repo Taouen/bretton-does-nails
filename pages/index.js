@@ -6,7 +6,7 @@ import InstagramCarousel from '../components/InstagramCarousel';
 
 /* Commit message
 
-  Centered images in carousel in case of varying heights. Fixed line wrapping in mobile menu.
+  
 
 */
 
@@ -14,6 +14,8 @@ import InstagramCarousel from '../components/InstagramCarousel';
 
   Content
   - create blog page for past news items
+  - add next/link into carousel components
+  - test rel="noopener" on Link component vs on the child a element
   
   
   √ create news component for landing page

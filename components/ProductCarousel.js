@@ -1,7 +1,6 @@
 import { Carousel } from 'react-responsive-carousel';
 
 const ProductCarousel = ({ images, name }) => {
-  console.log(images);
   return (
     <Carousel className="w-1/2 mx-auto" showThumbs={false} showStatus={false}>
       {images.map((photo, index) => (
