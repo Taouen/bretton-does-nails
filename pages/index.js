@@ -40,11 +40,12 @@ import InstagramCarousel from '../components/InstagramCarousel';
 
   - FOUC on desktop production version
   - Firefox (Desktop, Android): FOUC including external link icon being fullscreen size.
-  - Desktop/iPad: Show More/Less not adhering to positioning (show more does not push other elements down to make space, leaving 'show less' behind other elements.)
   - Android: Footer hidden behind address bar (Firefox) and cut off at bottom (Chrome)
-  - iPad - footer cut off in landscape
+  - iPad - footer cut off
   - iPhone 11 Pro (Chrome): horizontal scroll on page, and then displays smaller on rotation to portait orientation
+  - md: is too large for mobile landscape (aside from full screen iphones)
   
+  √ Desktop/iPad: Show More/Less not adhering to positioning (show more does not push other elements down to make space, leaving 'show less' behind other elements.) - Due to md:max-h-40 on parent div for Post component
   √ Mobile: Book Now link wraps second word onto a new line.
   √ Mobile: Instagram carousel is sized based off largest image, need to center smaller images vertically.
   √ Landscape view on small phones has header taking up half the screen. (might work to just adjust what sm: is in tailwind config)

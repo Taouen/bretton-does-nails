@@ -19,10 +19,6 @@ body:before {
   background-size: cover;
 }
 
-.newsPostBody span a {
-  color: #9ca3af;
-}
-
 /* Center alignment for photos in carousel components (in case all are not the same height) */
 
 ul.slider {

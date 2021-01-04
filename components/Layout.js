@@ -1,6 +1,5 @@
 import Header from './Header.js';
 import Footer from './Footer';
-import Head from 'next/head';
 
 const Layout = (props) => {
   return (
