@@ -13,7 +13,6 @@ const Post = ({ title, date, body }) => {
     mb-10
     md:flex-row 
     md:w-5/6
-    md:max-h-40
     md:mx-auto
     md:divide-y-0
     md:divide-x-2
@@ -25,7 +24,12 @@ const Post = ({ title, date, body }) => {
         <p className="text-gray-500">{date}</p>
       </div>
       <div className="md:w-3/4 px-4 py-2 newsPostBody">
-        <ShowMoreText lines={6} more="Show More" less="Show Less">
+        <ShowMoreText
+          lines={5}
+          more="Show More"
+          less="Show Less"
+          anchorClass="text-gray-500"
+        >
           {documentToReactComponents(body)}
         </ShowMoreText>
       </div>
