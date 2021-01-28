@@ -3,7 +3,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 const Service = ({ name, time, price, description }) => {
   return (
-    <div className="flex flex-col bg-white rounded-lg p-2 shadow-lg font-didact">
+    <div className="flex flex-col bg-white  font-didact">
       <div className="flex justify-between text-lg">
         <h3>{name}</h3>
         <span>{price}</span>

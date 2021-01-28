@@ -4,7 +4,7 @@ import ProductCarousel from './ProductCarousel';
 
 const Product = ({ price, size, description, images, name }) => {
   return (
-    <div className="flex flex-col bg-white rounded-lg p-2 shadow-lg font-didact">
+    <div className="flex flex-col px-4 py-2 font-didact">
       <div className="flex justify-between text-lg">
         <h3>{name}</h3>
         <span>{price}</span>

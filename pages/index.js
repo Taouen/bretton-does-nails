@@ -4,12 +4,6 @@ import BookingButton from '../components/BookingButton';
 import Post from '../components/Post';
 import InstagramCarousel from '../components/InstagramCarousel';
 
-/* Commit message
-
-  
-
-*/
-
 /*  TO DO
 
   Content

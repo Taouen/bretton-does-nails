@@ -11,6 +11,10 @@ const Post = ({ title, date, body }) => {
     divide-y-2 
     divide-pink
     mb-10
+    p-4
+    bg-white
+    bg-opacity-60
+    rounded-lg
     md:flex-row 
     md:w-5/6
     md:mx-auto
@@ -19,11 +23,11 @@ const Post = ({ title, date, body }) => {
     lg:w-3/4
     "
     >
-      <div className="flex flex-col p-2">
+      <div className="flex flex-col pr-2 pb-2">
         <h2 className="text-pink text-2xl">{title}</h2>
         <p className="text-gray-500">{date}</p>
       </div>
-      <div className="md:w-3/4 px-4 py-2 newsPostBody">
+      <div className="md:w-3/4 px-2  newsPostBody">
         <ShowMoreText
           lines={5}
           more="Show More"

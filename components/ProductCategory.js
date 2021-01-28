@@ -7,14 +7,12 @@ import Product from './Product';
 
 const ProductCategory = ({ categoryName, description, products }) => {
   return (
-    <div className="mb-10 ">
+    <div className="mb-10 bg-white rounded-lg p-4">
       <h3 className="text-2xl font-mallanna text-pink mb-4">{categoryName}</h3>
       <div className="flex flex-col md:flex-row mb-4 ">
-        <div className="flex flex-col md:flex-row">
-          <p className="font-didact text-lg p-4 bg-white shadow-lg rounded-lg ">
-            {description}
-          </p>
-        </div>
+        {/* <div className="flex flex-col md:flex-row"> */}
+        <p className="font-didact text-lg">{description}</p>
+        {/* </div> */}
       </div>
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {products.map((product, index) => {
