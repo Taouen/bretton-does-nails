@@ -32,14 +32,14 @@ export default function About({ about, src }) {
       <Layout>
         <div className="flex flex-col md:flex-row h-full">
           <img
-            alt="Photo of Bretton Wiltshire"
+            alt="Bretton Wiltshire"
             className="rounded-t-lg h-auto w-full md:h-full md:rounded-lg md:w-1/4 md:mr-4"
             src={src}
           />
 
           <div
             id="content"
-            className="p-4 font-didact  bg-white bg-opacity-50 rounded-b-lg md:rounded-lg md:overflow-scroll"
+            className="p-4 font-didact bg-white bg-opacity-50 rounded-b-lg md:rounded-lg md:overflow-scroll"
           >
             {documentToReactComponents(about.fields.body)}
           </div>

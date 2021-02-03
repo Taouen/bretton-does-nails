@@ -16,6 +16,7 @@ const Post = ({ title, date, body }) => {
     bg-opacity-60
     rounded-lg
     md:flex-row 
+    md: justify-between
     md:w-5/6
     md:mx-auto
     md:divide-y-0
@@ -23,11 +24,13 @@ const Post = ({ title, date, body }) => {
     lg:w-3/4
     "
     >
-      <div className="flex flex-col pr-2 pb-2">
+      <div className="flex flex-col pr-2 pb-2 w-1/3">
         <h2 className="text-pink text-2xl">{title}</h2>
         <p className="text-gray-500">{date}</p>
       </div>
-      <div className="md:w-3/4 px-2  newsPostBody">
+      <div className="md:w-2/3 px-2">
+        {' '}
+        {/* need to create more space between body and the divide line */}
         <ShowMoreText
           lines={5}
           more="Show More"

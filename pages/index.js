@@ -57,7 +57,7 @@ const client = require('contentful').createClient({
 export async function getStaticProps() {
   let data = await client.getEntries({
     content_type: 'post',
-    order: 'fields.date',
+    order: '-fields.date',
   });
 
   let photos = await client.getEntries({

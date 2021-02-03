@@ -8,6 +8,7 @@ import Link from 'next/link';
 
 const pages = [
   { title: 'About', link: '/about' },
+  { title: 'News', link: '/news' },
   { title: 'Services', link: '/services' },
   {
     title: 'Book Now',
@@ -38,7 +39,7 @@ const Header = () => {
         {pages.map((page) => {
           const classes = classnames([
             'last:mr-0 text-pink group hover:text-grey hover:underline',
-            `${page.external ? 'mr-5' : 'mr-10'}`,
+            `${page.external ? 'mr-2' : 'mr-8'}`,
           ]);
           return (
             <li className={classes} key={page.title}>
