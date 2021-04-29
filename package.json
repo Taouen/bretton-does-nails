@@ -16,7 +16,7 @@
     "@fortawesome/react-fontawesome": "^0.1.13",
     "classnames": "^2.2.6",
     "contentful": "^8.1.7",
-    "next": "10.0.3",
+    "next": "^10.2.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-responsive-carousel": "^3.2.11",
