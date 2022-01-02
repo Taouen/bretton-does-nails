@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classnames from 'classnames';
 import { useState } from 'react';
 import Link from 'next/link';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
 const pages = [
   { title: 'About', link: '/about' },
@@ -12,8 +13,7 @@ const pages = [
   { title: 'Services', link: '/services' },
   {
     title: 'Book Now',
-    link:
-      'https://www.fresha.com/a/bretton-does-nails-mane-attraction-winnipeg-836-mcleod-avenue-ul7mir4w/booking?menu=true',
+    link: 'https://www.fresha.com/a/bretton-does-nails-mane-attraction-winnipeg-836-mcleod-avenue-ul7mir4w/booking?menu=true',
     external: true,
   },
   { title: 'Products', link: '/products' },
