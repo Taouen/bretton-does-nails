@@ -52,7 +52,7 @@ const Products = ({ info, products, categories }) => {
             Products
           </h2>
           <div
-            className="font-didact text-lg p-4 bg-white shadow-lg rounded-lg mb-12 bg-opacity-50"
+            className="font-didact text-lg p-4 bg-white rounded-lg mb-12 "
             id="productPageInfo"
           >
             {documentToReactComponents(pageInfo)}

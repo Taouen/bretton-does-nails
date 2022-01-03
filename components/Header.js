@@ -5,14 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classnames from 'classnames';
 import { useState } from 'react';
 import Link from 'next/link';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
 const pages = [
   { title: 'About', link: '/about' },
+  { title: 'News', link: '/news' },
   { title: 'Services', link: '/services' },
   {
     title: 'Book Now',
-    link:
-      'https://www.fresha.com/a/bretton-does-nails-mane-attraction-winnipeg-836-mcleod-avenue-ul7mir4w/booking?menu=true',
+    link: 'https://www.fresha.com/a/bretton-does-nails-mane-attraction-winnipeg-836-mcleod-avenue-ul7mir4w/booking?menu=true',
     external: true,
   },
   { title: 'Products', link: '/products' },
@@ -38,7 +39,7 @@ const Header = () => {
         {pages.map((page) => {
           const classes = classnames([
             'last:mr-0 text-pink group hover:text-grey hover:underline',
-            `${page.external ? 'mr-5' : 'mr-10'}`,
+            `${page.external ? 'mr-2' : 'mr-8'}`,
           ]);
           return (
             <li className={classes} key={page.title}>
