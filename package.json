@@ -24,7 +24,7 @@
     "react-show-more-text": "^1.4.6"
   },
   "devDependencies": {
-    "postcss-preset-env": "^6.7.0",
+    "postcss-preset-env": "^7.2.3",
     "tailwindcss": "^2.2.7"
   }
 }
